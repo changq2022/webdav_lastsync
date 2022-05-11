@@ -14,7 +14,7 @@ jobs:
           export SYNCFILE="lastsync.txt"
           export REMOTEFILE="https://app.koofr.net/dav/Koofr/zotero/${SYNCFILE}"
           touch ${SYNCFILE}
-          curl -u ${woschangqiang@163.com}:${abk77fdj29hd7it6} -T ${SYNCFILE} ${REMOTEFILE}
+          curl -u ${KOOFR_EMAIL}:${KOOFR_DAVPASS} -T ${SYNCFILE} ${REMOTEFILE}
         env:
           KOOFR_EMAIL: ${{ secrets.KOOFR_EMAIL }}
           KOOFR_DAVPASS: ${{ secrets.KOOFR_DAVPASS }}
